@@ -1,0 +1,465 @@
+<mxfile host="app.diagrams.net" modified="2026-04-18T00:00:00.000Z" agent="Claude" version="21.0.0" type="device">
+  <diagram name="Diagrama de Atividades — Controle de Entregas" id="activity-diagram-001">
+    <mxGraphModel dx="1422" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- TÍTULO -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <mxCell id="title" value="&lt;b&gt;Sistema de Controle de Entregas — Diagrama de Atividades (UML)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="200" y="20" width="760" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- NÓ INICIAL -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <mxCell id="start" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="554" y="70" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- ATIVIDADE: ACESSAR SISTEMA -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <mxCell id="act_acessar" value="Acessar o Sistema" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="489" y="140" width="160" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- ATIVIDADE: SELECIONAR MÓDULO -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <mxCell id="act_selecionar" value="Selecionar Módulo de Cadastro" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=0;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="489" y="230" width="160" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- DECISÃO: OPERAÇÃO -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <mxCell id="dec_operacao" value="Operação?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="504" y="320" width="130" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ═══════════════════════════════════════════════════════ -->
+        <!-- FORK BAR (bifurcação) — não usada, fluxo direto pelos ramos -->
+        <!-- ═══════════════════════════════════════════════════════ -->
+
+        <!-- ════════════════════════════════════════════════════════
+             RAMO A — LISTAR / CONSULTAR
+             ════════════════════════════════════════════════════════ -->
+
+        <!-- ATIVIDADE: CARREGAR LISTA -->
+        <mxCell id="act_carregar" value="Carregar Lista de Registros" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="50" y="460" width="160" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- DECISÃO: FILTRAR? -->
+        <mxCell id="dec_filtrar" value="Aplicar&#xa;Filtros?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="65" y="550" width="130" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ATIVIDADE: CONFIGURAR FILTROS -->
+        <mxCell id="act_filtros" value="Configurar Filtros&#xa;(busca, inativos)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="230" y="563" width="160" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- ATIVIDADE: EXIBIR LISTA -->
+        <mxCell id="act_exibir_lista" value="Exibir Lista com Paginação" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="50" y="670" width="160" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ════════════════════════════════════════════════════════
+             RAMO B — CADASTRAR / EDITAR
+             ════════════════════════════════════════════════════════ -->
+
+        <!-- DECISÃO: CADASTRAR OU EDITAR? -->
+        <mxCell id="dec_cad_edit" value="Novo ou&#xa;Editar?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="499" y="460" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ATIVIDADE: ABRIR FORM NOVO -->
+        <mxCell id="act_form_novo" value="Abrir Formulário&#xa;em Branco" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="420" y="590" width="150" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- ATIVIDADE: CARREGAR DADOS EXISTENTES -->
+        <mxCell id="act_carregar_dados" value="Carregar Dados&#xa;do Registro" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="590" y="590" width="150" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- ATIVIDADE: PREENCHER FORMULÁRIO -->
+        <mxCell id="act_preencher" value="Preencher / Editar&#xa;Campos do Formulário" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="499" y="690" width="160" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- ATIVIDADE: SUBMETER FORMULÁRIO -->
+        <mxCell id="act_submeter" value="Submeter Formulário" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="499" y="785" width="160" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- DECISÃO: DADOS VÁLIDOS? -->
+        <mxCell id="dec_valido" value="Dados&#xa;Válidos?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="504" y="875" width="150" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ATIVIDADE: EXIBIR ERROS DE VALIDAÇÃO -->
+        <mxCell id="act_erros" value="Exibir Erros de&#xa;Validação" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="700" y="888" width="150" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- ATIVIDADE: ENVIAR PARA API -->
+        <mxCell id="act_api" value="Enviar Requisição&#xa;para API (POST/PUT)" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="499" y="1000" width="160" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- DECISÃO: API OK? -->
+        <mxCell id="dec_api_ok" value="API&#xa;Respondeu&#xa;OK?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="504" y="1095" width="150" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- ATIVIDADE: EXIBIR ERRO DE API -->
+        <mxCell id="act_erro_api" value="Exibir Toast de Erro" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="700" y="1120" width="150" height="40" as="geometry" />
+        </mxCell>
+
+        <!-- ════════════════════════════════════════════════════════
+             RAMO C — INATIVAR
+             ════════════════════════════════════════════════════════ -->
+
+        <!-- ATIVIDADE: SELECIONAR REGISTRO PARA INATIVAR -->
+        <mxCell id="act_sel_inativar" value="Selecionar Registro&#xa;para Inativar" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="910" y="460" width="160" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- ATIVIDADE: EXIBIR CONFIRM DIALOG -->
+        <mxCell id="act_confirm" value="Exibir Diálogo de&#xa;Confirmação" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="910" y="560" width="160" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- DECISÃO: CONFIRMAR? -->
+        <mxCell id="dec_confirmar" value="Confirmou?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="920" y="655" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- ATIVIDADE: ENVIAR PATCH INATIVAR -->
+        <mxCell id="act_inativar_api" value="Enviar Requisição&#xa;PATCH /inativar" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="910" y="780" width="160" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- ATIVIDADE: EXIBIR TOAST SUCESSO INATIVAR -->
+        <mxCell id="act_toast_inativar" value="Exibir Toast de&#xa;Sucesso" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="910" y="880" width="160" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- ════════════════════════════════════════════════════════
+             CONVERGÊNCIA — EXIBIR TOAST SUCESSO + RETORNAR LISTA
+             ════════════════════════════════════════════════════════ -->
+
+        <!-- ATIVIDADE: TOAST SUCESSO CADASTRO/EDIÇÃO -->
+        <mxCell id="act_toast_ok" value="Exibir Toast de&#xa;Sucesso" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="499" y="1230" width="160" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- JOIN BAR — convergência dos 3 ramos -->
+        <mxCell id="join_bar" value="" style="shape=mxgraph.flowchart.start_2;fillColor=#000000;strokeColor=#000000;fontColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="489" y="1330" width="180" height="10" as="geometry" />
+        </mxCell>
+
+        <!-- ATIVIDADE: RETORNAR PARA LISTA -->
+        <mxCell id="act_retornar" value="Retornar para Lista&#xa;e Recarregar Dados" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="499" y="1390" width="160" height="44" as="geometry" />
+        </mxCell>
+
+        <!-- DECISÃO: CONTINUAR? -->
+        <mxCell id="dec_continuar" value="Continuar&#xa;no Sistema?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="504" y="1480" width="150" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- NÓ FINAL -->
+        <mxCell id="end" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="554" y="1600" width="30" height="30" as="geometry" />
+        </mxCell>
+        <!-- Anel externo do nó final -->
+        <mxCell id="end_ring" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="544" y="1590" width="50" height="50" as="geometry" />
+        </mxCell>
+
+        <!-- ════════════════════════════════════════════════════════
+             SETAS — FLUXO PRINCIPAL
+             ════════════════════════════════════════════════════════ -->
+
+        <!-- start → act_acessar -->
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="start" target="act_acessar" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- act_acessar → act_selecionar -->
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="act_acessar" target="act_selecionar" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- act_selecionar → dec_operacao -->
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="act_selecionar" target="dec_operacao" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- dec_operacao → act_carregar [Listar] -->
+        <mxCell id="e4" value="Listar" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" edge="1" source="dec_operacao" target="act_carregar" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="569" y="390" />
+              <mxPoint x="130" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- dec_operacao → dec_cad_edit [Cadastrar/Editar] -->
+        <mxCell id="e5" value="Cadastrar/Editar" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" edge="1" source="dec_operacao" target="dec_cad_edit" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- dec_operacao → act_sel_inativar [Inativar] -->
+        <mxCell id="e6" value="Inativar" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" edge="1" source="dec_operacao" target="act_sel_inativar" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="634" y="390" />
+              <mxPoint x="990" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ════ RAMO A ════ -->
+        <!-- act_carregar → dec_filtrar -->
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="act_carregar" target="dec_filtrar" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- dec_filtrar → act_filtros [Sim] -->
+        <mxCell id="e8" value="Sim" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" edge="1" source="dec_filtrar" target="act_filtros" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- dec_filtrar → act_exibir_lista [Não] -->
+        <mxCell id="e9" value="Não" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" edge="1" source="dec_filtrar" target="act_exibir_lista" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- act_filtros → act_exibir_lista -->
+        <mxCell id="e10" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="act_filtros" target="act_exibir_lista" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="650" />
+              <mxPoint x="130" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- act_exibir_lista → join_bar -->
+        <mxCell id="e11" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="act_exibir_lista" target="join_bar" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="130" y="1335" />
+              <mxPoint x="489" y="1335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ════ RAMO B ════ -->
+        <!-- dec_cad_edit → act_form_novo [Novo] -->
+        <mxCell id="e12" value="Novo" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" edge="1" source="dec_cad_edit" target="act_form_novo" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- dec_cad_edit → act_carregar_dados [Editar] -->
+        <mxCell id="e13" value="Editar" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" edge="1" source="dec_cad_edit" target="act_carregar_dados" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- act_form_novo → act_preencher -->
+        <mxCell id="e14" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="act_form_novo" target="act_preencher" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="495" y="670" />
+              <mxPoint x="579" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- act_carregar_dados → act_preencher -->
+        <mxCell id="e15" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="act_carregar_dados" target="act_preencher" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="665" y="670" />
+              <mxPoint x="579" y="670" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- act_preencher → act_submeter -->
+        <mxCell id="e16" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="act_preencher" target="act_submeter" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- act_submeter → dec_valido -->
+        <mxCell id="e17" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="act_submeter" target="dec_valido" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- dec_valido → act_erros [Não] -->
+        <mxCell id="e18" value="Não" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" edge="1" source="dec_valido" target="act_erros" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- act_erros → act_preencher (loop) -->
+        <mxCell id="e19" value="Corrigir" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" source="act_erros" target="act_preencher" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="870" y="910" />
+              <mxPoint x="870" y="712" />
+              <mxPoint x="659" y="712" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- dec_valido → act_api [Sim] -->
+        <mxCell id="e20" value="Sim" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" edge="1" source="dec_valido" target="act_api" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- act_api → dec_api_ok -->
+        <mxCell id="e21" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="act_api" target="dec_api_ok" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- dec_api_ok → act_erro_api [Não] -->
+        <mxCell id="e22" value="Não (4xx/5xx)" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" edge="1" source="dec_api_ok" target="act_erro_api" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- act_erro_api → act_preencher (loop) -->
+        <mxCell id="e23" value="Tentar novamente" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" edge="1" source="act_erro_api" target="act_preencher" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="870" y="1140" />
+              <mxPoint x="870" y="712" />
+              <mxPoint x="659" y="712" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- dec_api_ok → act_toast_ok [Sim] -->
+        <mxCell id="e24" value="Sim (2xx)" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" edge="1" source="dec_api_ok" target="act_toast_ok" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- act_toast_ok → join_bar -->
+        <mxCell id="e25" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="act_toast_ok" target="join_bar" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ════ RAMO C ════ -->
+        <!-- act_sel_inativar → act_confirm -->
+        <mxCell id="e26" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="act_sel_inativar" target="act_confirm" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- act_confirm → dec_confirmar -->
+        <mxCell id="e27" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="act_confirm" target="dec_confirmar" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- dec_confirmar → act_inativar_api [Sim] -->
+        <mxCell id="e28" value="Sim" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" edge="1" source="dec_confirmar" target="act_inativar_api" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- dec_confirmar → act_exibir_lista [Cancelar] -->
+        <mxCell id="e29" value="Cancelar" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" edge="1" source="dec_confirmar" target="act_exibir_lista" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="690" />
+              <mxPoint x="860" y="690" />
+              <mxPoint x="130" y="690" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- act_inativar_api → act_toast_inativar -->
+        <mxCell id="e30" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="act_inativar_api" target="act_toast_inativar" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- act_toast_inativar → join_bar -->
+        <mxCell id="e31" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="act_toast_inativar" target="join_bar" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="990" y="1335" />
+              <mxPoint x="669" y="1335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- ════ CONVERGÊNCIA ════ -->
+        <!-- join_bar → act_retornar -->
+        <mxCell id="e32" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="join_bar" target="act_retornar" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- act_retornar → dec_continuar -->
+        <mxCell id="e33" style="edgeStyle=orthogonalEdgeStyle;" edge="1" source="act_retornar" target="dec_continuar" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- dec_continuar → act_selecionar [Sim] -->
+        <mxCell id="e34" value="Sim" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" edge="1" source="dec_continuar" target="act_selecionar" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="1515" />
+              <mxPoint x="420" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- dec_continuar → end [Não] -->
+        <mxCell id="e35" value="Não" style="edgeStyle=orthogonalEdgeStyle;fontSize=10;" edge="1" source="dec_continuar" target="end" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- ════════════════════════════════════════════════════════
+             LEGENDA
+             ════════════════════════════════════════════════════════ -->
+        <mxCell id="leg_bg" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="20" y="1390" width="420" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="leg_title" value="&lt;b&gt;Legenda&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=11;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1398" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1425" width="16" height="16" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1t" value="Nó Inicial / Nó Final" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="55" y="1420" width="170" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2" value="Atividade" style="rounded=1;whiteSpace=wrap;html=1;arcSize=50;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1455" width="80" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2t" value="Ação / Atividade do sistema" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1455" width="200" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="leg3" value="Decisão?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1488" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="leg3t" value="Nó de decisão (desvio de fluxo)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1498" width="230" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="leg4" value="" style="shape=mxgraph.flowchart.start_2;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="30" y="1543" width="80" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="leg4t" value="Barra de sincronização (join)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="120" y="1537" width="230" height="25" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
